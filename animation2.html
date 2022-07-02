@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tj</title>
+    <style>
+        body{
+            padding-top: 50px;
+            padding-left: 50px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-name: tj;
+            border-radius: 50px;
+            box-shadow: 20px 20px;
+        }
+        @keyframes tj{
+            0%{background-color: yellow;top: 0px;left: 0px; transform: rotate(0deg); }
+            25%{background-color: orange;top: 0px;left: 100px; transform: rotate(90deg);}
+            50%{background-color: orangered;top: 100px;left:100px;transform: rotate(180deg); }
+            75%{background-color: crimson;top: 100px;left: 0px;transform: rotate(270deg); }
+            100%{background-color: hotpink;top: 0px;left: 0px; transform: rotate(360deg);}
+
+         
+        }
+    </style>
+</head>
+<body>
+    <div ></div>
+</body>
+</html>

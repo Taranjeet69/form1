@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        margin: 50px;
+        padding: 50px;
+    }
+     .imgg:hover{
+
+        transform: rotate(360deg);
+        transition: 3s;
+        opacity: 0.5;
+        position: fixed;
+         filter: grayscale(2);
+         visibility: visible;
+         border-radius: 50px;
+
+        
+    }
+    .imgg{
+        background-image: url('.\assets\Capture.PNG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        visibility: visible;
+        border-radius: 50px;
+
+    }
+
+   .text{
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    z-index: -1;
+   }
+
+
+   </style>
+</head>
+<body>
+    <div class="text"></div>
+    <div class="imgg"><img class="ig"  src=".\assets\Capture.PNG"></div>
+    <div class="text" ><h1> windows</h1></div>
+    
+
+</body>
+</html>
