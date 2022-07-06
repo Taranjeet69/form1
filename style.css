@@ -1,0 +1,54 @@
+/* body{
+    background-color: yellowgreen;
+} */
+.banner-image {
+    background-image: url("../img/banner-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+html,
+body,
+div {
+    padding: 0;
+    margin: 0;
+}
+
+.con {
+    color: black;
+}
+
+#counter {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#services{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #0292C8;
+}
+.serv{
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+/* .imgg{
+    width: 100px;
+} */
+h3{
+    color: #0066a6;
+}
+#us{
+    background-color: whitesmoke;
+
+}
+.logo{
+    width: 4px;
+}
+#clients {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.card{
+    border: none;
+}
