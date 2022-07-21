@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>Accordian</title>
+    <title>Date picker</title>
+    
+</head>
+<body>
+    <p>Enter you birth date: <input type="text" id="dob1" ></p>
+    <p>Enter you birth date: <input type="text" id="dob2" readonly></p>
+
+    <script>
+        $('document').ready(function(){
+            $('#dob1').datepicker({
+               showWeek: true,
+               showAnim:"slide",
+               yearSuffix:"(DOB)"
+            })
+        })
+        $('#dob2').datepicker()
+        $('#dob2').datepicker("show")
+    </script>
+</body>
+</html>

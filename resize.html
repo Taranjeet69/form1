@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>Reziable</title>
+    <style>
+        #div{
+            background-color: aquamarine;
+             color:black ;
+              display:inline-block;
+              word-wrap: normal;
+              overflow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div">
+        <p>Lorem ipsum dolor, sit amet consect natus aspernatu lorem fugit inventore amet incidunt sint.</p>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("#div").resizable();
+        })
+
+    </script>
+</body>
+</html>

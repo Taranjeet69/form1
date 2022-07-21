@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>RAnge slider</title>
+</head>
+<body>
+    <label for="age" id="age">Enter your age </label>
+    <input type="text" id="agevalue" value="18" style="color:red ;" disabled > 
+    
+    <div id="slider"></div>  <hr>
+    <br>
+    <br>
+    <div id="sliderprice"></div>
+    <label for="startvalue"  >start value:</label>
+    <input type="text" id="startvalue" disabled style="color:red ;"> <br>
+    <label for="stopvalue"  >stop value:</label>
+    <input type="text" id="stopvalue" disabled style="color:red ;">  <br>
+    <label for="changevalue"  >Range value</label> 
+    <input type="text" id="changevalue" disabled style="color:red ;"> <br>
+
+    <label for="slidevalue"  >slider value</label> 
+    <input type="text" id="slidevalue" disabled style="color:red ;"> 
+
+
+    <script>
+        $(document).ready(function(){
+            $("#slider").slider({
+                min:18,
+                max:76,
+               
+                start:function(event,ui){
+                    $('#agevalue').val(ui.value)
+                },
+                
+
+            })
+
+
+
+        $("#sliderprice").slider({
+            range:true,
+            min:1,
+            max:100,
+            values:[1,50],
+            start:function(event,ui){
+                $('#startvalue').val("$"+ui.values[0])
+            },
+            stop:function(event,ui){
+                $('#stopvalue').val("$"+ui.values[1])
+
+            }
+            ,
+            change:function(event,ui){
+                $('#changevalue').val("$"+ui.values[0]+ " - " +ui.values[1])
+
+            }
+            ,
+            slide:function(event,ui){
+                $('#slidevalue').val("$"+ui.values[0]+ "-"+ui.values[1])
+
+            }
+        })
+         
+          
+          
+        })
+    </script>
+</body>
+</html>

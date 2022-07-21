@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+    <title>Sortable</title>
+    <style>
+        /* body{
+            background: linear-gradient(#e66465, #9198e5);
+            background-repeat: no-repeat;
+            background-size: fill;
+        } */
+        .right {
+            display: flex;
+            float: left;
+        }
+
+        .left {
+            display: flex;
+            float: left;
+        }
+
+        #sort-1 ul {
+            list-style-type: none;
+        }
+
+        #sort-2 {
+            list-style-type: none;
+
+        }
+
+        ul li:nth-child(even) {
+
+            width: 100px;
+            height: 60px;
+            display: flex;
+            padding: 0%;
+            color: white;
+            background-color: #242582;
+        }
+
+        ul li:nth-child(odd) {
+            display: flex;
+            width: 100px;
+            height: 60px;
+            padding: 0%;
+            color: white;
+            background-color: #F64C72;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="left">
+        
+        <ul id="sort-1" style="background-color: white !important; ">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+   
+    <div class="right">
+       
+        <ul id="sort-2">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+    </div>
+    <script>
+        $('document').ready(function () {
+            $('#sort-1').sortable();
+            $('#sort-2').sortable();
+            $('#sort-1').sortable({
+                connectWith: "#sort-1, #sort-2"
+            });
+            $('#sort-2').sortable({
+                connectWith: "#sort-1, #sort-2"
+            });
+
+        })
+    </script>
+</body>
+
+</html>
